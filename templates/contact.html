@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liên Hệ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Cố định Footer ở cuối */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+        .footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+        /* Thiết kế tiêu đề */
+        .header {
+            background: linear-gradient(to right, #007bff, #6610f2);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        /* Card thông tin */
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- 🔹 Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">🏠 Trang Chủ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('single_qr') }}">🔗 Tạo QR từ Link</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('batch_qr') }}">📂 Tạo QR từ File Excel</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('contact') }}">📩 Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🔹 Tiêu đề -->
+    <div class="header">
+        Liên Hệ Với Chúng Tôi
+    </div>
+
+    <!-- 🔹 Nội dung chính -->
+    <div class="content">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="info-card text-center">
+                       
+                        <p>Ứng dụng giúp bạn tạo mã QR dễ dàng, nhanh chóng và miễn phí.<br>
+                        Bạn có thể tạo mã QR từ đường link hoặc danh sách file Excel.</p>
+                                         
+                        <p>Vui lòng gửi email nếu bạn cần hỗ trợ: <span class="text-primary">admin@thptgangthep.edu.vn<span></p>
+                        <a href="mailto:admin@thptgangthep.edu.vn" class="btn btn-outline-primary btn-lg">Gửi Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔹 Footer -->
+    <footer class="bg-dark text-white fixed-bottom text-center">
+        <div class="text-center p-1">
+          QR Code Generator - Tạo nhanh Mã QR Code. ©2025 Thiết kế & Phát triển bởi <strong> H3N</strong>  
+         
+          
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
